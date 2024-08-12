@@ -1,0 +1,8 @@
+development:
+  url: <%= "postgresql://development:development@localhost:5432/my_store_development" %>
+
+test:
+  url: <%= "postgresql://development:development@localhost:5432/my_store_test" %>
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
