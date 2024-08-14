@@ -8,9 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Product.create(name: 'Product 1', description: 'Description 1', price: 100.0)
-Product.create(name: 'Product 2', description: nil, price: '200.0abc')
-Product.create(name: 'Product 3', description: 'Description 3', price: 300.0)
-Product.create(name: nil, description: 'Description 4', price: 400.0)
-Product.create(name: 'Product 5', description: 'Description 5', price: nil)
-Product.create(name: 'Product 6', description: 'Description 6', price: 600.0)
+Category.create(name: 'Electronics')
+Category.create(name: 'Books')
+
+Supplier.create(name: 'Supplier 1')
+Supplier.create(name: 'Supplier 2')
+
+Product.create(name: 'Product 1', description: 'Description 1', price: 100.0, quantity_in_stock: 20, category_id: 1, supplier_id: 1)
+Product.create(name: 'Product 2', description: nil, price: '200.0abc', quantity_in_stock: 20, category_id: 2, supplier_id: 2)
+Product.create(name: 'Product 3', description: 'Description 3', price: nil, quantity_in_stock: 30, category_id: nil, supplier_id: 1)
